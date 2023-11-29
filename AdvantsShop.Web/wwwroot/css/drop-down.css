@@ -1,0 +1,25 @@
+a.drop-down-root {
+    border-radius: 4px;
+}
+
+drop-down.vertical:hover {
+    display: block
+}
+
+drop-down.horizontal:hover {
+    display: table-cell;
+}
+
+div.drop-down-item {
+}
+
+option {
+    border-radius: 4px;
+    color: #2D9CEE;
+    background: white;
+    border-bottom: 1px #EFEFF4;
+}
+
+    option:hover {
+        background: #EFEFF4;
+    }
