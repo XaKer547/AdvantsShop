@@ -1,0 +1,19 @@
+ul.menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 48px;
+    gap: 30px;
+    padding: 0;
+}
+
+.menu > li:first-child {
+    left: 0;
+    width: min-content;
+}
+
+.menu > li {
+    right: 0;
+    width: 100%;
+}

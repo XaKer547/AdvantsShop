@@ -1,6 +1,38 @@
-div.navbar {
-    background-color: #2D9CEE;
-    border-radius:4px;
+.navbar-horizontal {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    background-color: var(--primary-bg-color);
+    overflow: hidden;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
 
+    .navbar-horizontal div {
+        width: 100%;
+        height: 100%;
+        box-sizing: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+        .navbar-horizontal div a {
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+        }
+
+.navbar-horizontal div:hover {
+    background-color: #45a7f0;
 }
