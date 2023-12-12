@@ -1,4 +1,4 @@
-ul.menu {
+/*ul.menu {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -16,4 +16,8 @@ ul.menu {
 .menu > li {
     right: 0;
     width: 100%;
+}
+*/
+.secondary {
+    color: #666666;
 }

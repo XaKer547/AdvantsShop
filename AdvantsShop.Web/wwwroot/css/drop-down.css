@@ -1,12 +1,12 @@
-.dropdown {
+/*.dropdown {
     float: left;
     position: relative;
     display: inline-block;
     width: inherit;
-}
+}*/
 
     /* отображемая часть dropdown */
-    .dropdown .dropbtn {
+    /*.dropdown .dropbtn {
         height: 48px;
         width: inherit;
         white-space: nowrap;
@@ -15,10 +15,10 @@
         font-size: 16px;
         border: none;
         border-radius: 4px;
-    }
+    }*/
 
 /* блок с выводом */
-.dropdown-content {
+/*.dropdown-content {
     display: none;
     z-index: 1;
     position: absolute;
@@ -28,10 +28,10 @@
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
-}
+}*/
 
     /* элемент списка */
-    .dropdown-content a {
+    /*.dropdown-content a {
         color: var(--primary-bg-color);
         font-size: 16px;
         text-decoration: none;
@@ -50,4 +50,4 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+}*/
