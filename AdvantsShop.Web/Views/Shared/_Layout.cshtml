@@ -41,16 +41,16 @@
                     <img class="align-self-center" src="~/icons/logo.svg" />
                 </a>
 
-                <div class="form-outline h-100 ps-4" style="width:35%;" data-mdb-input-init>
+                <div class="form-outline h-100" style="width:35%;padding-left:4.5rem" data-mdb-input-init>
                     <input type="search" id="form1" class="form-control search-bar py-3" placeholder="Поиск по товарам" />
                 </div>
 
                 <div class="ms-auto d-flex justify-content-end gap-3">
-                    <a class="nav-link p-0">
+                    <a class="nav-link secondary p-0">
                         <img src="~/icons/heart.svg" />
                     </a>
 
-                    <a class="nav-link p-0">
+                    <a class="nav-link secondary p-0">
                         <img src="~/icons/burger-add.svg" />
                     </a>
 
@@ -64,11 +64,68 @@
 
             </div>
 
-            <div class="gap-5 d-flex justify-content-between ">
-                <button class="btn btn-primary primary btn text-nowrap w-25 p-3">
-                    <img class="align-self-center" src="~/icons/burger-menu.svg" />
-                    Каталог товаров
-                </button>
+            <div class="gap-5 d-flex">
+                <div class="dropdown text-nowrap show">
+                    <button class="btn primary p-3" style="padding-right:7rem !important;" type="button" data-bs-toggle="dropdown">
+                        <img class="align-self-center" src="~/icons/burger-menu.svg" />
+                        Каталог товаров
+                    </button>
+                    
+                    <!-- mt-4 & style for main page -->
+
+                    <ul class="dropdown-menu catalog-menu w-100 mt-4" style="display:block">
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Одежда<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Мебель<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Бытовая техника<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Спортивные товары<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Косметика<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Садовая техника<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Строительные материалы<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Автотехника<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Еда<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
+                                Разработка сайтов<img src="~/icons/arrow-right.svg" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <nav class="navbar navbar-expand-lg nav-primary w-100">
                     <div class="container-fluid d-flex h-100">
@@ -113,15 +170,77 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="container ">
+        <main role="main" class="pt-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="footer text-muted secondary bg-grey">
-        <div class="container h-100">
-            &copy; 2023 AdvantsShop
+    <footer class="footer text-muted bg-grey">
+        <div class="container gap-5 py-5 ps-4">
+
+            <div class="d-flex justify-content-start">
+
+                <div class="text-start">
+                    <a class="nav-link catalog-header">Каталог</a>
+                    <a class="nav-link catalog-link">Телефоны</a>
+                    <a class="nav-link catalog-link">Техника</a>
+                    <a class="nav-link catalog-link">Одежда/обувь</a>
+                    <a class="nav-link catalog-link">Детские товары</a>
+                    <a class="nav-link catalog-link">Цветы</a>
+                    <a class="nav-link catalog-link">Еда/напитки</a>
+                </div>
+
+                <div class="text-start">
+                    <a class="nav-link catalog-header">Информация</a>
+                    <a class="nav-link catalog-link">О магазине</a>
+                    <a class="nav-link catalog-link">Бренды</a>
+                    <a class="nav-link catalog-link">Доставка и оплата</a>
+                    <a class="nav-link catalog-link">Блог</a>
+                    <a class="nav-link catalog-link">Бонусная программа</a>
+                    <a class="nav-link catalog-link">Контакты</a>
+                </div>
+
+                <div class="text-start">
+                    <a class="nav-link catalog-header">Личный кабинет</a>
+                    <a class="nav-link catalog-link">Вход</a>
+                    <a class="nav-link catalog-link">Регистрация</a>
+                    <a class="nav-link catalog-link">Забыли пароль?</a>
+                </div>
+
+                <div class="text-start">
+                    <a class="nav-link catalog-header">Мы в социальных сетях</a>
+                    <a class="nav-link catalog-link">Вконтакте</a>
+                    <a class="nav-link catalog-link">Фейсбук</a>
+                    <a class="nav-link catalog-link">Твиттер</a>
+                </div>
+
+                <div class="btn btn-danger btn-certificate ms-auto py-3 ps-3 text-start h-75 ">
+                    <img class="mb-2" src="~/icons/shoppings.svg" />
+                    <br />
+                    <span class="text-uppercase">Подарочный <br /> сертификат</span>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between py-5 mt-5">
+                <span class="catalog-header">&copy; 2023 AdvantsShop</span>
+
+                <div class="d-flex justify-content-center payment-types-container">
+                    <img class="ps-2" src="~/icons/payment/paypal.svg" />
+                    <img class="ps-2" src="~/icons/payment/yandex-money.svg" />
+                    <img class="ps-2" src="~/icons/payment/mastercard.svg" />
+                    <img class="ps-2" src="~/icons/payment/visa.svg" />
+                    <img class="ps-2" src="~/icons/payment/mir.svg" />
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <a class="nav-link link-primary py-0 text-end">Лицензионное соглашение</a>
+                    <a class="nav-link link-primary py-0 text-end p-0">Политика конфиденциальности</a>
+                </div>
+            </div>
+
+
         </div>
     </footer>
     <environment include="Development">

@@ -10,15 +10,19 @@ li.dropdown {
     color: white;
 }
 
-    li.dropdown:hover .dropdown-menu {
-        display: block;
-    }
+.catalog-menu {
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 
 ul.dropdown-menu {
     width: 125%;
     padding: 0px;
-    overflow: hidden;
     color: white;
+    overflow: hidden;
     line-height: 46.2px;
     border-radius: 10px;
 }
@@ -30,6 +34,12 @@ ul.dropdown-menu {
 .dropdown-menu .dropdown-item {
     color: var(--primary-bg-color);
     font-size: 14px;
+}
+
+.catalog-menu .dropdown-item {
+    width: inherit !important;
+    color: #666666;
+    width: 100%;
 }
 
 div.container-fluid {

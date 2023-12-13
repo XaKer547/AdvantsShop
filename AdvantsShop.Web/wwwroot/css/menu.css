@@ -18,17 +18,32 @@
     width: 100%;
 }
 */
+
+.catalog-header {
+    color: #C8C7CC !important;
+}
+
+.catalog-link {
+    color: #8A8A8F;
+}
+
 .bg-grey {
     background-color: #F9F9F9;
+}
+
+.link-primary {
+    color: var(--primary-bg-color);
 }
 
 .primary {
     border: none;
     background-color: var(--primary-bg-color);
+    color:white;
 }
 
     .primary:hover {
         background-color: var(--primary-bg-color-hovered);
+        color: white;
     }
 
 .secondary {
@@ -52,3 +67,9 @@ input.search-bar {
 .search-bar::placeholder {
     color: #C8C7CC;
 }
+
+
+.payment-types-container img {
+    height: 45%;
+    width: 35%;
+}   
