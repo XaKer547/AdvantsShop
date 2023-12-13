@@ -19,6 +19,7 @@ ul.dropdown-menu {
     padding: 0px;
     overflow: hidden;
     color: white;
+    line-height: 46.2px;
     border-radius: 10px;
 }
 
@@ -36,13 +37,13 @@ div.container-fluid {
     margin: 0;
 }
 
-a.nav-link:hover {
+li.nav-item .nav-link {
     color: white;
 }
 
-a.nav-link {
-    color: white;
-}
+    li.nav-item .nav-link:hover {
+        color: white;
+    }
 
 li.nav-item:hover {
     background-color: #45a7f0;

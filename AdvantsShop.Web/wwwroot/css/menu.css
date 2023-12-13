@@ -18,6 +18,37 @@
     width: 100%;
 }
 */
+.bg-grey {
+    background-color: #F9F9F9;
+}
+
+.primary {
+    border: none;
+    background-color: var(--primary-bg-color);
+}
+
+    .primary:hover {
+        background-color: var(--primary-bg-color-hovered);
+    }
+
 .secondary {
     color: #666666;
+}
+
+    .secondary:hover {
+        color: var(--primary-bg-color);
+    }
+
+        .secondary:hover img {
+            filter: brightness(0) saturate(100%) invert(64%) sepia(29%) saturate(7500%) hue-rotate(181deg) brightness(96%) contrast(94%);
+        }
+
+input.search-bar {
+    border: 0;
+    background: #F9F9F9 url('../icons/magnifier.svg') no-repeat scroll 10px 15px;
+    padding-left: 40px;
+}
+
+.search-bar::placeholder {
+    color: #C8C7CC;
 }
