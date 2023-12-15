@@ -38,7 +38,7 @@
 .primary {
     border: none;
     background-color: var(--primary-bg-color);
-    color:white;
+    color: white;
 }
 
     .primary:hover {
@@ -72,4 +72,15 @@ input.search-bar {
 .payment-types-container img {
     height: 45%;
     width: 35%;
-}   
+}
+
+.carousel-item-content {
+    font-size: 18px;
+    line-height: 27px;
+    align-items: start;
+}
+
+.carousel-title {
+    font-size: 36px;
+    line-height: 46.8px;
+}
