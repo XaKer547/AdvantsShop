@@ -1,72 +1,40 @@
-.list {
+.dropdown.menu-disabled .dropdown-menu {
+    display: none !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    width: 125%;
+    padding: 0px;
+    color: white;
+    overflow: hidden;
+    line-height: 46.2px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px #0000001A;
+}
+
+    .dropdown-menu li {
+        border-bottom: 1px solid #EFEFF4;
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: var(--primary-bg-color);
+        font-size: 14px;
+    }
+
+.catalog-menu {
+    position: relative;
+    width: inherit !important;
     box-shadow: 0px 2px 4px 0px #00000033;
     border-radius: 4px;
     color: #666666;
-    width: 25%;
+    border-radius: 4px;
 }
 
-/*.dropdown {
-  
-
-      position: absolute;
-  z-index: 1000;
-  display: none;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0;
-  font-size: 1rem;
-  color: #212529;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-}*/
-
-/* отображемая часть dropdown */
-/*.dropdown .dropbtn {
-        height: 48px;
-        width: inherit;
-        white-space: nowrap;
-        background: var(--primary-bg-color);
-        color: white;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-    }*/
-
-/* блок с выводом */
-/*.dropdown-content {
-    display: none;
-    z-index: 1;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 20px 0px #0000001A;
-    border: 12px var(--secondary-color);
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-}*/
-
-/* элемент списка */
-/*.dropdown-content a {
-        color: var(--primary-bg-color);
-        font-size: 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-        height: 48px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 24px;
-        border-bottom: solid 1px var(--secondary-color);
+    .catalog-menu .dropdown-item {
+        color: inherit;
     }
-
-        .dropdown-content a:hover {
-            background-color: var(--secondary-color);
-        }
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}*/

@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdvantsShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/button.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/carousel.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/dignity-box.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/drop-down.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/table.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AdvantsShop.Web.styles.css" asp-append-version="true" />
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,15 +70,15 @@
             </div>
 
             <div class="gap-5 d-flex">
-                <div class="dropdown text-nowrap show">
-                    <button class="btn primary p-3" style="padding-right:7rem !important;" type="button" data-bs-toggle="dropdown">
+
+                <!-- JS -> menu-disabled -->
+                <div class="dropdown catalog-menu text-nowrap menu-disabled">
+                    <button class="btn primary p-3 border-start" style="padding-right:7rem !important;" type="button" data-bs-toggle="dropdown">
                         <img class="align-self-center" src="~/icons/burger-menu.svg" />
                         Каталог товаров
                     </button>
 
-                    <!-- mt-4 & style for main page -->
-
-                    <ul class="dropdown-menu list catalog-menu w-100 mt-4" style="display:block">
+                    <ul class="dropdown-menu w-100">
                         <li>
                             <a class="dropdown-item py-3 d-flex justify-content-between" href="#">
                                 Одежда<img src="~/icons/arrow-right.svg" />
@@ -127,11 +132,11 @@
                     </ul>
                 </div>
 
-                <nav class="navbar navbar-expand-lg nav-primary w-100">
+                <nav class="navbar navbar-expand-lg nav-primary bg-primary w-100">
                     <div class="container-fluid d-flex h-100">
                         <div class="flex-fill h-100">
                             <ul class="navbar-nav justify-content-between align-items-stretch h-100 text-center">
-                                <li class="nav-item dropdown flex-fill">
+                                <li class="nav-item dropdown flex-fill rounded-start">
                                     <a class="nav-link h-100 pt-3" href="#" role="button" data-bs-toggle="dropdown">
                                         О магазине <img src="~/icons/arrow-down.svg" />
                                     </a>
@@ -170,7 +175,7 @@
             </div>
         </div>
     </header>
-    <div class="container ">
+    <div class="container">
         <main role="main" class="pt-3">
             @RenderBody()
         </main>

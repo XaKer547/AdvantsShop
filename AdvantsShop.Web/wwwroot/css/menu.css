@@ -1,23 +1,6 @@
-/*ul.menu {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 48px;
-    gap: 30px;
-    padding: 0;
+.nav-link:hover {
+    color: var(--primary-bg-color);
 }
-
-.menu > li:first-child {
-    left: 0;
-    width: min-content;
-}
-
-.menu > li {
-    right: 0;
-    width: 100%;
-}
-*/
 
 .catalog-header {
     color: #C8C7CC !important;
@@ -27,12 +10,12 @@
     color: #8A8A8F;
 }
 
-.bg-grey {
-    background-color: #F9F9F9;
-}
-
 .link-primary {
     color: var(--primary-bg-color);
+}
+
+.bg-grey {
+    background-color: #F9F9F9;
 }
 
 .primary {
@@ -46,27 +29,43 @@
         color: white;
     }
 
+.primary-color {
+    color: var(--primary-bg-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-bg-color) !important;
+    color: white;
+}
+
 .secondary {
     color: #666666;
 }
 
-    .secondary:hover {
+    .secondary:hover a {
         color: var(--primary-bg-color);
     }
 
-        .secondary:hover img {
-            filter: brightness(0) saturate(100%) invert(64%) sepia(29%) saturate(7500%) hue-rotate(181deg) brightness(96%) contrast(94%);
-        }
+    .secondary:hover img {
+        filter: brightness(0) saturate(100%) invert(64%) sepia(29%) saturate(7500%) hue-rotate(181deg) brightness(96%) contrast(94%);
+    }
 
-input.search-bar {
+.search-bar {
     border: 0;
     background: #F9F9F9 url('../icons/magnifier.svg') no-repeat scroll 10px 15px;
     padding-left: 40px;
 }
 
-.search-bar::placeholder {
-    color: #C8C7CC;
+    .search-bar::placeholder {
+        color: #C8C7CC;
+    }
+
+.txb {
 }
+
+    .txb::placeholder {
+        color: #C8C7CC;
+    }
 
 
 .payment-types-container img {
@@ -74,13 +73,11 @@ input.search-bar {
     width: 35%;
 }
 
-.carousel-item-content {
-    font-size: 18px;
-    line-height: 27px;
-    align-items: start;
-}
-
-.carousel-title {
-    font-size: 36px;
-    line-height: 46.8px;
+.box-shadow-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 8.63%, rgba(0, 0, 0, 0) 81.8%);
 }

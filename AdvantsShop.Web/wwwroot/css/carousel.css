@@ -1,0 +1,26 @@
+.carousel-item-content {
+    font-size: 18px;
+    line-height: 27px;
+    align-items: start;
+}
+
+.carousel-title {
+    font-size: 36px;
+    line-height: 46.8px;
+}
+
+.carousel-caption {
+    left: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2.25rem;
+}
+
+.carousel img {
+    height: 555px !important;
+}
+
+.carousel-indicators-rounded button {
+    border-radius: 100%;
+    width: 10px !important;
+    height: 10px !important;
+}

@@ -1,0 +1,44 @@
+.population-items-container .population-item a p {
+    margin-bottom: 46px;
+}
+
+.population-items-container .population-item {
+    height: 289px;
+}
+
+    .population-items-container .population-item .population-item-image {
+        justify-content: flex-end;
+        display: flex;
+    }
+
+        .population-items-container .population-item .population-item-image .population-item-image-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+.table-fixed {
+}
+
+    .table-fixed a {
+        display: block;
+        justify-items: center;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    .table-fixed div {
+        padding: 0;
+        margin: 0;
+    }
+
+        .table-fixed div:hover {
+            border-color: var(--primary-bg-color) !important;
+        }
