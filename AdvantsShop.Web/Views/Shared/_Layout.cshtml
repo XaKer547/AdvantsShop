@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AdvantsShop</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/button.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pagination.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/carousel.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/dignity-box.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/drop-down.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/navbar.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shadow.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/table.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AdvantsShop.Web.styles.css" asp-append-version="true" />
@@ -71,8 +74,7 @@
 
             <div class="gap-5 d-flex">
 
-                <!-- JS -> menu-disabled -->
-                <div class="dropdown catalog-menu text-nowrap menu-disabled">
+                <div id="productsCatalog" class="dropdown catalog-menu text-nowrap">
                     <button class="btn primary p-3 border-start" style="padding-right:7rem !important;" type="button" data-bs-toggle="dropdown">
                         <img class="align-self-center" src="~/icons/burger-menu.svg" />
                         Каталог товаров
@@ -249,14 +251,15 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
 
     <environment exclude="Development">
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
 
-    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

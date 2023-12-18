@@ -42,3 +42,7 @@
         .table-fixed div:hover {
             border-color: var(--primary-bg-color) !important;
         }
+
+.half-row {
+    height: 50vh;
+}
