@@ -191,26 +191,30 @@
 
         <div class="container-fluid bg-grey rounded d-flex justify-content-evenly mt-4 mb-5 py-5 dignity-box">
             <div>
-                <img src="~/icons/percent.svg" />
-                <p class="mb-0 mt-4">
+                <img class="align-content-center" src="~/icons/percent.svg" />
+                <p class="align-self-end m-0">
                     Акции и скидки для
                     <br />
                     постоянных клиентов
                 </p>
             </div>
+
             <div class="vr"></div>
+
             <div>
-                <img src="~/icons/star.svg" />
-                <p class="mb-0 mt-4">
+                <img class="align-content-center" src="~/icons/star.svg" />
+                <p class="align-self-end m-0">
                     Качественные услуги
                     <br />
                     и сервис
                 </p>
             </div>
+
             <div class="vr"></div>
+
             <div>
-                <img src="~/icons/table.svg" />
-                <p class="mb-0 mt-4">
+                <img class="align-content-center" src="~/icons/table.svg" />
+                <p class="align-self-end m-0">
                     Широкий ассортимент
                     <br />
                     товаров
@@ -359,16 +363,15 @@
         </div>
 
         <!--Хиты продаж-->
-        <!--Пагинация-->
         <div class="d-flex">
             <nav class="align-items-center">
                 <ul class="pagination text-center align-items-center">
-                    <li class="page-item">
+                    <li class="page-item disabled">
                         <a class="page-link" href="#">
                             <img src="~/icons/arrow-previous.svg" />
                         </a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                     <li class="page-item">
@@ -403,45 +406,47 @@
         <div class="mt-5">
             <h4 class="mb-4">Статьи</h4>
 
-            <div class="d-flex">
-                <div class="col-4 vh-100">
-                    <img class="half-row w-auto h-auto" src="~/images/articles/minecraft.png" />
-                    <div class="half-row">
-                        <p>
+            <div class="row">
+                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                    <img class="align-self-center" src="~/images/articles/minecraft.png" />
+
+                    <div class="align-self-end">
+                        <p class="article-title">
                             Оставьте отзыв, чтобы помочь другим
                         </p>
-                        <small>
-                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
-                        </small>
-                    </div>
-                </div>
-                <div class="col-4 vh-100">
-                    <img class="half-row w-auto h-auto" src="~/images/articles/terminal.png" />
-                    <div class="half-row">
-                        <p>
-                            Оставьте отзыв, чтобы помочь другим
-                        </p>
-                        <small>
-                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
-                        </small>
-                    </div>
-                </div>
-                <div class="col-4 vh-100">
-                    <img class="half-row w-auto h-auto" src="~/images/articles/phones.png" />
-                    <div class="half-row">
-                        <p>
-                            Оставьте отзыв, чтобы помочь другим
-                        </p>
-                        <small>
+                        <small class="secondary">
                             Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
                         </small>
                     </div>
                 </div>
 
+                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                    <img class="align-self-center" src="~/images/articles/terminal.png" />
 
+                    <div class="align-self-end">
+                        <p class="article-title">
+                            Где купить терминал
+                            для эквайринга
+                        </p>
+                        <small class="secondary">
+                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
+                        </small>
+                    </div>
+                </div>
 
+                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                    <img class="align-self-center" src="~/images/articles/phones.png" />
+
+                    <div class="align-self-end">
+                        <p class="article-title">
+                            Как выбрать свой идеальный телефон
+                        </p>
+                        <small class="secondary">
+                            Подключите автоплатёж и будьте уверены, что налог оплачен в срок. Вам не придётся тратить время на поиск суммы к уплате в личном кабинете налогоплательщика.
+                        </small>
+                    </div>
+                </div>
             </div>
-
 
         </div>
 
@@ -478,25 +483,5 @@
     <script type="text/javascript">
         VK.Widgets.Group("vk_groups", { mode: 3, height: 400, color1: "FFFFFF", color2: "000000", color3: "5181B8" }, 14532206);
     </script>
-}         <div class="d-flex flex-column">
+    }         <div class="d-flex flex-column">
 </div>
-@*
-<div class="d-flex flex-column">
-    <img src="~/images/articles/terminal.png" />
-    <p>
-        Где купить терминал для эквайринга
-    </p>
-    <small>
-        Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
-    </small>
-</div>
-
-<div class="d-flex flex-column">
-    <img src="~/images/articles/phones.png" />
-    <p>
-        Как выбрать свой идеальный телефон
-    </p>
-    <small>
-        Подключите автоплатёж и будьте уверены, что налог оплачен в срок. Вам не придётся тратить время на поиск суммы к уплате в личном кабинете налогоплательщика.
-    </small>
-</div> *@

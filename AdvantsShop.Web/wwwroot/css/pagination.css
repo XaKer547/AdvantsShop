@@ -6,11 +6,24 @@
     margin-right: 4px;
 }
 
+    .page-item img {
+        filter: invert(49%) sepia(94%) saturate(1725%) hue-rotate(181deg) brightness(98%) contrast(91%);
+    }
+
     .page-item .page-link {
         color: inherit;
-        background-color: inherit;
+        background-color: inherit !important;
         width: 50px;
         height: 50px;
         border-radius: 4px;
         padding: 0.75rem;
     }
+
+    .page-item.disabled {
+        color: #D9D9DE;
+        pointer-events: none;
+    }
+
+        .page-item.disabled img {
+            filter: none;
+        }

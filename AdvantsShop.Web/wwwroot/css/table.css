@@ -43,6 +43,8 @@
             border-color: var(--primary-bg-color) !important;
         }
 
-.half-row {
-    height: 50vh;
+
+.article-title {
+    font-size: 18px;
+    font-weight: 400;
 }
