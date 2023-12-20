@@ -19,8 +19,39 @@
     height: 555px !important;
 }
 
-.carousel-indicators-rounded button {
+.carousel-indicators-rounded li {
     border-radius: 100%;
     width: 10px !important;
     height: 10px !important;
 }
+
+.slide-item-carousel {
+    display: flex;
+    width: 264px;
+    height: 280px !important;
+}
+
+    .slide-item-carousel .carousel-item.active {
+        display: flex;
+        align-content: stretch;
+    }
+
+    .slide-item-carousel .carousel-indicators [data-bs-target] {
+        background-color: var(--secondary-color);
+        opacity: 1;
+    }
+
+    .slide-item-carousel .carousel-indicators .active {
+        background-color: var(--primary-bg-color);
+    }
+
+    .slide-item-carousel .carousel-item {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide-item-carousel img {
+        align-self: center;
+        width: min-content;
+        height: min-content !important;
+    }

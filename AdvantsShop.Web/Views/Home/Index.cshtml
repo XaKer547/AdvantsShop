@@ -120,13 +120,15 @@
 
     <div class="col-9 mb-5" style="padding-left: 0.53rem;">
         <div class="container-fluid carousel slide carousel-fade" id="adv-carousel" data-bs-ride="carousel">
-            <div class="carousel-indicators carousel-indicators-rounded justify-content-end me-5 gap-2 mb-5">
-                <button class="active" type="button" data-bs-target="#adv-carousel" data-bs-slide-to="0"></button>
-                <button type="button" data-bs-target="#adv-carousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#adv-carousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#adv-carousel" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#adv-carousel" data-bs-slide-to="4"></button>
-            </div>
+
+            <ol class="carousel-indicators justify-content-end carousel-indicators-rounded gap-2 m-0 mb-5 pe-5">
+                <li class="active" data-bs-target="#adv-carousel" data-bs-slide-to="0"></li>
+                <li data-bs-target="#adv-carousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#adv-carousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#adv-carousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#adv-carousel" data-bs-slide-to="4"></li>
+            </ol>
+
             <div class="carousel-inner rounded">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="~/images/carousel/pc-sell.png" />
@@ -289,6 +291,7 @@
             </div>
         </div>
 
+        <!--Новинки-->
         <div class="container-fluid mt-5">
             <div class="d-flex justify-content-evenly align-items-center">
                 <h4 class="mb-4">Новинки</h4>
@@ -296,73 +299,402 @@
                 <a class="ms-auto primary-color text-decoration-none pe-2">
                     <small>Посмотреть все новинки</small>
                 </a>
-
             </div>
 
-            @*  <div class="container d-flex justify-content-evenly">
+            <div class="swiper py-5">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="d-flex">
+                            <div class="row">
+                                <div class="col d-flex align-content-evenly flex-wrap align-items-center">
+                                    <div class="carousel slide-item-carousel" id="new-carousel-1" data-bs-ride="carousel">
+                                        <ol class="carousel-indicators justify-content-center m-0">
+                                            <li class="active" data-bs-target="#new-carousel-1" data-bs-slide-to="0"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="4"></li>
+                                        </ol>
 
-            <div id="carousel-item-1" class="carousel slide">
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-item-1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carousel-item-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carousel-item-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            </div>
-            </div>
+                                        <div class="carousel-inner slide-item-carousel">
+                                            <div class="carousel-item active">
+                                                <img src="~/images/new goods/stroller.png" />
+                                            </div>
+                                        </div>
+                                    </div>
 
-            <div id="carousel-item-2" class="carousel slide">
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-item-2" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carousel-item-2" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carousel-item-2" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            </div>
-            </div>
+                                    <div class="d-flex flex-column rating-container">
+                                        <p>
+                                            Прогулочная коляска Valco Baby Snap 4
+                                        </p>
 
-            <div id="carousel-item-3" class="carousel slide">
-            <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carousel-item-3" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carousel-item-3" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carousel-item-3" data-bs-slide-to="2"></button>
-            </div>
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/carousel/iphone-sell.png" />
-            </div>
-            </div>
-            </div>
+                                        <div class="d-flex rating gap-1" stars-amount="4"></div>
 
-            </div> *@
+                                        <div class="d-flex flex-column mt-auto">
 
+                                            <small class="m-0 pt-4 stock">В наличии</small>
+
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="m-0">16 790 руб.</h4>
+
+                                                <a class="nav-link secondary p-0 d-flex align-items-center gap-2">
+                                                    <img src="/icons/shop-cart.svg">
+                                                    <span>
+                                                        В корзину
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+              
+                            <div class="row">
+                                <div class="col d-flex align-content-evenly flex-wrap align-items-center">
+                                    <div class="carousel slide-item-carousel" id="new-carousel-1" data-bs-ride="carousel">
+                                        <ol class="carousel-indicators justify-content-center m-0">
+                                            <li class="active" data-bs-target="#new-carousel-1" data-bs-slide-to="0"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="4"></li>
+                                        </ol>
+                                        <div class="carousel-inner slide-item-carousel">
+                                            <div class="carousel-item active">
+                                                <img src="~/images/new goods/xiaomi.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column rating-container">
+                                        <p>
+                                            Смартфон Xiaomi Mi 9 Lite 6/128GB
+                                        </p>
+
+                                        <div class="d-flex rating gap-1" stars-amount="4"></div>
+
+                                        <div class="d-flex flex-column mt-auto">
+
+                                            <small class="m-0 pt-4 stock">В наличии</small>
+
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="m-0">23 600 руб.</h4>
+
+                                                <a class="nav-link secondary p-0 d-flex align-items-center gap-2">
+                                                    <img src="/icons/shop-cart.svg">
+                                                    <span>
+                                                        В корзину
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col d-flex align-content-evenly flex-wrap align-items-center">
+                                    <div class="carousel slide-item-carousel" id="new-carousel-1" data-bs-ride="carousel">
+                                        <ol class="carousel-indicators justify-content-center m-0">
+                                            <li class="active" data-bs-target="#new-carousel-1" data-bs-slide-to="0"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="4"></li>
+                                        </ol>
+
+                                        <div class="carousel-inner slide-item-carousel">
+                                            <div class="carousel-item active">
+                                                <img src="~/images/new goods/imac.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column rating-container">
+                                        <p>
+                                            Моноблок 27 Apple iMac Pro
+                                        </p>
+
+                                        <div class="d-flex rating gap-1" stars-amount="4"></div>
+
+                                        <div class="d-flex flex-column mt-auto">
+
+                                            <small class="m-0 pt-4 stock">В наличии</small>
+
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="m-0">426 000 руб.</h4>
+
+                                                <a class="nav-link secondary p-0 d-flex align-items-center gap-2">
+                                                    <img src="/icons/shop-cart.svg">
+                                                    <span>
+                                                        В корзину
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="d-flex">
+                            <div class="row">
+                                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                                    <img class="align-self-center" src="~/images/articles/minecraft.png" />
+
+                                    <div class="align-self-end">
+                                        <p class="article-title">
+                                            Оставьте отзыв, чтобы помочь другим
+                                        </p>
+                                        <small class="secondary">
+                                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                                    <img class="align-self-center" src="~/images/articles/terminal.png" />
+
+                                    <div class="align-self-end">
+                                        <p class="article-title">
+                                            Где купить терминал
+                                            для эквайринга
+                                        </p>
+                                        <small class="secondary">
+                                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                                    <img class="align-self-center" src="~/images/articles/phones.png" />
+
+                                    <div class="align-self-end">
+                                        <p class="article-title">
+                                            Как выбрать свой идеальный телефон
+                                        </p>
+                                        <small class="secondary">
+                                            Подключите автоплатёж и будьте уверены, что налог оплачен в срок. Вам не придётся тратить время на поиск суммы к уплате в личном кабинете налогоплательщика.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
 
         <!--Хиты продаж-->
+        <div class="container-fluid mt-5">
+            <div class="d-flex justify-content-evenly align-items-center">
+                <h4 class="mb-4">Хиты продаж</h4>
+
+                <a class="ms-auto primary-color text-decoration-none pe-2">
+                    <small>Посмотреть все хиты продаж</small>
+                </a>
+            </div>
+
+            <div class="swiper py-5">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="d-flex">
+                            <div class="row">
+                                <div class="col d-flex align-content-evenly flex-wrap align-items-center">
+                                    <div class="carousel slide-item-carousel" id="new-carousel-1" data-bs-ride="carousel">
+                                        <ol class="carousel-indicators justify-content-center m-0">
+                                            <li class="active" data-bs-target="#new-carousel-1" data-bs-slide-to="0"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="4"></li>
+                                        </ol>
+
+                                        <div class="carousel-inner slide-item-carousel">
+                                            <div class="carousel-item active">
+                                                <img src="~/images/bestseller/paint.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column rating-container">
+                                        <p>
+                                            Краски для сухих помещений
+                                        </p>
+
+                                        <div class="d-flex rating gap-1" stars-amount="4"></div>
+
+                                        <div class="d-flex flex-column mt-auto">
+
+                                            <small class="m-0 pt-4 stock">В наличии</small>
+
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="m-0">16 790 руб.</h4>
+
+                                                <a class="nav-link secondary p-0 d-flex align-items-center gap-2">
+                                                    <img src="/icons/shop-cart.svg">
+                                                    <span>
+                                                        В корзину
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col d-flex align-content-evenly flex-wrap align-items-center">
+                                    <div class="carousel slide-item-carousel" id="new-carousel-1" data-bs-ride="carousel">
+                                        <ol class="carousel-indicators justify-content-center m-0">
+                                            <li class="active" data-bs-target="#new-carousel-1" data-bs-slide-to="0"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="4"></li>
+                                        </ol>
+                                        <div class="carousel-inner slide-item-carousel">
+                                            <div class="carousel-item active">
+                                                <img src="~/images/bestseller/dress.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column rating-container">
+                                        <p>
+                                            Блуза Concepti Mi 9
+                                            Lite 6/128GB
+                                        </p>
+
+                                        <div class="d-flex rating gap-1" stars-amount="4"></div>
+
+                                        <div class="d-flex flex-column mt-auto">
+
+                                            <small class="m-0 pt-4 stock">В наличии</small>
+
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="m-0">23 600 руб.</h4>
+
+                                                <a class="nav-link secondary p-0 d-flex align-items-center gap-2">
+                                                    <img src="/icons/shop-cart.svg">
+                                                    <span>
+                                                        В корзину
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col d-flex align-content-evenly flex-wrap align-items-center">
+                                    <div class="carousel slide-item-carousel" id="new-carousel-1" data-bs-ride="carousel">
+                                        <ol class="carousel-indicators justify-content-center m-0">
+                                            <li class="active" data-bs-target="#new-carousel-1" data-bs-slide-to="0"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="2"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="3"></li>
+                                            <li data-bs-target="#new-carousel-1" data-bs-slide-to="4"></li>
+                                        </ol>
+
+                                        <div class="carousel-inner slide-item-carousel">
+                                            <div class="carousel-item active">
+                                                <img src="~/images/bestseller/sofa.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-column rating-container">
+                                        <p>
+                                            Диван Лени Textile
+                                            Rustic
+                                        </p>
+
+                                        <div class="d-flex rating gap-1" stars-amount="4"></div>
+
+                                        <div class="d-flex flex-column mt-auto">
+
+                                            <small class="m-0 pt-4 stock">В наличии</small>
+
+                                            <div class="d-flex justify-content-between">
+                                                <h4 class="m-0">426 000 руб.</h4>
+
+                                                <a class="nav-link secondary p-0 d-flex align-items-center gap-2">
+                                                    <img src="/icons/shop-cart.svg">
+                                                    <span>
+                                                        В корзину
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="d-flex">
+                            <div class="row">
+                                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                                    <img class="align-self-center" src="~/images/articles/minecraft.png" />
+
+                                    <div class="align-self-end">
+                                        <p class="article-title">
+                                            Оставьте отзыв, чтобы помочь другим
+                                        </p>
+                                        <small class="secondary">
+                                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                                    <img class="align-self-center" src="~/images/articles/terminal.png" />
+
+                                    <div class="align-self-end">
+                                        <p class="article-title">
+                                            Где купить терминал
+                                            для эквайринга
+                                        </p>
+                                        <small class="secondary">
+                                            Стильная и независимая. Легко управляйте средствами на вашем счёте. Получайте информацию о ваших финансах, платежах и переводах при помощи сообщений.
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <div class="col-4 d-flex align-content-evenly flex-wrap">
+                                    <img class="align-self-center" src="~/images/articles/phones.png" />
+
+                                    <div class="align-self-end">
+                                        <p class="article-title">
+                                            Как выбрать свой идеальный телефон
+                                        </p>
+                                        <small class="secondary">
+                                            Подключите автоплатёж и будьте уверены, что налог оплачен в срок. Вам не придётся тратить время на поиск суммы к уплате в личном кабинете налогоплательщика.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
         <div class="d-flex">
             <nav class="align-items-center">
                 <ul class="pagination text-center align-items-center">
@@ -483,5 +815,4 @@
     <script type="text/javascript">
         VK.Widgets.Group("vk_groups", { mode: 3, height: 400, color1: "FFFFFF", color2: "000000", color3: "5181B8" }, 14532206);
     </script>
-    }         <div class="d-flex flex-column">
-</div>
+}  

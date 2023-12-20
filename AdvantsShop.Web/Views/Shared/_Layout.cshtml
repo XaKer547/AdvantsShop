@@ -6,7 +6,14 @@
     <title>AdvantsShop</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/swiper/swiper-bundle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" />
+
     <link rel="stylesheet" href="~/css/button.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/rating.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/pagination.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/carousel.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/dignity-box.css" asp-append-version="true" />
@@ -19,10 +26,6 @@
     <link rel="stylesheet" href="~/AdvantsShop.Web.styles.css" asp-append-version="true" />
 
     <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -251,14 +254,17 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/lib/swiper/swiper-bundle.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
 
     <environment exclude="Development">
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/lib/swiper/swiper-bundle.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
