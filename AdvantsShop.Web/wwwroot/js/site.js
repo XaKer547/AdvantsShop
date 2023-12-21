@@ -34,3 +34,50 @@ for (let i = 0; i < ratings.length; i++) {
     }
 }
 
+function counterDown(btn) {
+
+    var id = btn.getAttribute('target');
+
+    var input = document.getElementById(id);
+
+    if (input.value < 2) {
+        confirmCartItemDelete();
+        return;
+    }
+
+    input.value--;
+
+    counterValueChanged(input);
+}
+const cart = document.getElementById('cart');
+
+let currentCartItem;
+function counterValueChanged(inc) {
+    var container = inc.parentNode.parentNode;
+
+    var unitPrice = container.querySelector('#unit-price').getAttribute("data-cost");
+
+    var finalPrice = inc.value * parseFloat(unitPrice);
+
+    container.querySelector('#final-price').innerHTML = finalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+function counterUp(btn) {
+    var id = btn.getAttribute('target');
+
+    var input = document.getElementById(id);
+
+    input.value++;
+    counterValueChanged(input);
+}
+
+function selectCartItemToDelete(btn) {
+    currentCartItem = $(btn).parents().filter('.cart-item')[0];
+}
+
+function deleteCartItem() {
+    cart.removeChild(currentCartItem);
+}
+
+function deleteCartItems() {
+    $(cart).empty();
+}

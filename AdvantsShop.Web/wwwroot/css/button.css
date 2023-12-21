@@ -32,3 +32,21 @@ button.accept-policy {
     .btn-secondary:hover {
         box-shadow: 0px 4px 8px 0px #0000000D;
     }
+
+
+.increment {
+    height: 26px;
+}
+
+    .increment button {
+        height: 13px;
+        background: none;
+        border: none;
+        font-size: 2px;
+        align-items: center;
+    }
+
+.increment-spinner-container {
+    bottom: 0;
+    right: 0;
+}

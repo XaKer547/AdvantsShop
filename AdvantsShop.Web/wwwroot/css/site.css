@@ -2,6 +2,7 @@
     --primary-bg-color: #2D9CEE;
     --primary-bg-color-hovered: #45a7f0;
     --secondary-color: #EFEFF4;
+    --primary-filter: brightness(0) saturate(100%) invert(64%) sepia(29%) saturate(7500%) hue-rotate(181deg) brightness(96%) contrast(94%);
 }
 
 * {
@@ -23,6 +24,7 @@ html {
 
 body {
 }
+
 html, body {
     overflow-x: hidden;
 }
