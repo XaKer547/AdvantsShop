@@ -18,7 +18,7 @@ button.accept-policy {
     background-color: #00186A;
 }
 
-.btn-secondary {
+.btn-secondary-wide {
     color: var(--primary-bg-color) !important;
     background: #F9F9F9 !important;
     border-color: var(--secondary-color) !important;
@@ -29,7 +29,7 @@ button.accept-policy {
     font-size: 14px;
 }
 
-    .btn-secondary:hover {
+    .btn-secondary-wide:hover {
         box-shadow: 0px 4px 8px 0px #0000000D;
     }
 

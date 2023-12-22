@@ -5,12 +5,11 @@
     .dignity-box div {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .dignity-box img {
         max-width: min-content;
-        align-content: start;
     }
 
 .vr {
