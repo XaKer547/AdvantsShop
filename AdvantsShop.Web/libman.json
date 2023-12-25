@@ -1,10 +1,14 @@
 {
-  "version": "1.0",
   "defaultProvider": "cdnjs",
   "libraries": [
     {
       "library": "Swiper@11.0.5",
       "destination": "wwwroot/lib/Swiper/"
+    },
+    {
+      "library": "jquery.mask@1.14.16",
+      "destination": "wwwroot/lib/jquery.mask/"
     }
-  ]
+  ],
+  "version": "1.0"
 }

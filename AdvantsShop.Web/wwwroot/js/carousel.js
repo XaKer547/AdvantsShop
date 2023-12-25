@@ -8,7 +8,6 @@
     },
 });
 
-
 const maxStars = 5;
 
 var ratings = document.getElementsByClassName('rating');
@@ -22,7 +21,7 @@ for (let i = 0; i < ratings.length; i++) {
 
         var star = document.createElement('img');
 
-        star.src = "/icons/star.svg";
+        star.src = "/icons/star-dark.svg";
 
         star.classList.add('star');
 

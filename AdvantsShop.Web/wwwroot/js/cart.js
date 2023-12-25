@@ -1,8 +1,18 @@
-﻿
-const cart = document.getElementById('cart');
+﻿const cart = document.getElementById('cart');
 const finalPriceEl = document.getElementById('final-price');
 
 let currentCartItem;
+
+if (cart == null)
+    return;
+
+var counters = document.getElementsByClassName("cart-item-counter");
+
+for (var i = 0; i < counters.length; i++) {
+    counterValueChangedWithoutNotify(counters[i]);
+}
+
+calculateFinalPrice();
 
 function counterDown(btn) {
 
@@ -11,7 +21,6 @@ function counterDown(btn) {
     var input = document.getElementById(id);
 
     if (input.value < 2) {
-        //confirmCartItemDelete();
         return;
     }
 
@@ -30,9 +39,31 @@ function counterUp(btn) {
 }
 
 function counterValueChanged(inc) {
-    var container = inc.parentNode.parentNode;
+    var cartItemPriceInfo = currentCartItem.querySelector('.cart-item-price-info');
 
-    var unitPrice = container.querySelector('#unit-price').getAttribute("data-cost");
+    var unitPrice = cartItemPriceInfo.querySelector('#unit-price').getAttribute("data-cost");
+
+    var totalPrice = inc.value * parseFloat(unitPrice);
+
+    var totalPriceEl = cartItemPriceInfo.querySelector('#total-price');
+
+    totalPriceEl.setAttribute('data-total-cost', totalPrice);
+
+    totalPriceEl.innerHTML = formatNumber(totalPrice);
+
+    calculateFinalPrice();
+
+    var itemId = cartItem.getAttribute('data-item-id');
+
+    $.ajax({
+        method: 'patch',
+        url: '/Cart/ChangeItemAmount',
+        data: { itemId: itemId, amount: inc.value }
+    });
+}
+
+function counterValueChangedWithoutNotify(inc) {
+    var unitPrice = currentCartItem.querySelector('#unit-price').getAttribute("data-cost");
 
     var totalPrice = inc.value * parseFloat(unitPrice);
 
@@ -41,8 +72,6 @@ function counterValueChanged(inc) {
     totalPriceEl.setAttribute('data-total-cost', totalPrice);
 
     totalPriceEl.innerHTML = formatNumber(totalPrice);
-
-    calculateFinalPrice();
 }
 
 function calculateFinalPrice() {
@@ -67,23 +96,30 @@ function selectCartItemToDelete(btn) {
 }
 
 function deleteCartItem() {
+    var itemId = currentCartItem.getAttribute('data-item-id');
 
-    var finalPrice = finalPriceEl.getAttribute('data-final-cost');
+    $.ajax({
+        method: 'POST',
+        url: '/Cart/RemoveItem',
+        data: { itemId: itemId }
+    }).done(function () {
+        var finalPrice = finalPriceEl.getAttribute('data-final-cost');
 
-    var division = parseFloat(finalPrice) - parseFloat(currentCartItem.querySelector('#total-price').getAttribute('data-total-cost'));
+        var division = parseFloat(finalPrice) - parseFloat(currentCartItem.querySelector('#total-price').getAttribute('data-total-cost'));
 
-    finalPriceEl.setAttribute('data-final-cost', division);
-    finalPriceEl.innerHTML = formatNumber(division);
+        finalPriceEl.setAttribute('data-final-cost', division);
+        finalPriceEl.innerHTML = formatNumber(division);
 
-    cart.removeChild(currentCartItem);
+        cart.removeChild(currentCartItem);
+    });
 }
 
 function deleteCartItems() {
-    $(cart).empty();
-
-    finalPriceEl.innerHTML = 0;
-}
-
-function formatNumber(num) {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    $.ajax({
+        method: 'HEAD',
+        url: '/Cart/ClearCart',
+    }).done(function () {
+        $(cart).empty();
+        finalPriceEl.innerHTML = 0;
+    });
 }

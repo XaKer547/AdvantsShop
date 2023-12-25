@@ -15,7 +15,7 @@
 }
 
 .bg-grey {
-    background-color: #F9F9F9;
+    background-color: #F9F9F9 !important;
 }
 
 .primary {
@@ -54,6 +54,10 @@
         filter: brightness(0) saturate(100%) invert(64%) sepia(29%) saturate(7500%) hue-rotate(181deg) brightness(96%) contrast(94%);
     }
 
+        .secondary:hover img.disabled {
+            filter: none;
+        }
+
 .search-bar {
     border: 0;
     background: #F9F9F9 url('../icons/magnifier.svg') no-repeat scroll 10px 15px;
@@ -78,11 +82,6 @@
 }
 
 .break-out {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: -100%;
+    margin-right: -100%;
 }
-

@@ -1,0 +1,71 @@
+﻿@using AdvantShop.Web.Models;
+@model RegistrationViewModel
+
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="d-flex row mb-5 mt-5 justify-content-between">
+
+    <div class="col-4 pe-5">
+
+        <form method="post" class="needs-validation" asp-action="Registration" asp-controller="Account">
+
+            <div class="mt-2">
+                <p>Имя</p>
+
+                <input class="bg-grey form-control" type="text" asp-for="FirstName"/>
+            </div>
+
+            <div class="mt-2">
+                <p>Фамилия</p>
+
+                <input class="bg-grey form-control" type="text" asp-for="LastName" />
+            </div>
+            <div class="mt-2">
+                <p>E-mail</p>
+
+                <input class="bg-grey form-control" type="email" asp-for="Email" />
+            </div>
+
+            <div class="mt-2">
+                <p>Контактный телефон</p>
+
+                <input class="bg-grey form-control phone-masked" type="tel" asp-for="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="mt-2">
+                <p>Пароль</p>
+
+                <input class="bg-grey form-control" type="password" asp-for="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+
+            <div class="mt-2 mb-4">
+                <p>Пароль (ещё раз)</p>
+
+                <input class="bg-grey form-control" type="password" asp-for="RepeatPassword"/>
+                <span asp-validation-for="RepeatPassword" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2 align-items-center">
+                <button class="btn btn-primary primary py-3 px-5" type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="col-5 p-0">
+        <p class="fs-4">Зачем нужна регистрация?</p>
+
+        <p class="secondary-color">
+            Зарегистрировавшись на сайте Вы сможете получить личный кабинет,
+            что позволит Вам отслеживать историю заказов, быстрее оформлять заказы в нашем Интернет магазине,
+            так как вся информация о Вас будет доступна в нашем магазине и ее не нужно будет повторно вносить
+        </p>
+    </div>
+</div>

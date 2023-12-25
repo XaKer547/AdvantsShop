@@ -1,4 +1,6 @@
-﻿@{
+﻿@using AdvantShop.Web.Models;
+@model CartViewModel
+@{
     ViewData["Title"] = "Корзина";
 }
 
@@ -24,98 +26,59 @@
         <div class="border-bottom"></div>
 
         <div id="cart" class="container cart-container mt-4">
+            @foreach (var item in Model.Products)
+            {
+                <div class="cart-item" data-item-id="@item.Id">
+                    <div class="cart-item-content">
+                        <div class="d-flex col-4 pe-3 gap-3">
+                            <img src="@item.Product.Images.FirstOrDefault()" />
+                            <p class="m-0 cart-item-name">
+                                @item.Product.Name
+                            </p>
+                        </div>
 
-            <div class="cart-item">
-                <div class="cart-item-content">
-                    <div class="d-flex col-4 pe-3 gap-3">
-                        <img src="/images/new goods/imac.png" />
-                        <p class="m-0 cart-item-name">
-                            Apple iMac 21,5″ 6 Core i5 3 ГГц, 8 ГБ, 1 ТБ FD, RPro 560X
-                        </p>
-                    </div>
+                        <div class="ms-auto d-flex gap-5 cart-item-price-info">
 
-                    <div class="ms-auto d-flex gap-5 cart-item-price-info">
+                            <div class="increment">
+                                <input id="product-increment-1" class="cart-item-counter border rounded" type="number" min="0" value="@item.Amount" onchange="counterValueChanged(this)" />
 
-                        <div class="increment">
-                            <input id="product-increment-1" class="cart-item-counter border rounded" type="number" min="0" value="1" onchange="counterValueChanged(this)" />
-
-                            <div class="position-relative">
-                                <div class="position-absolute increment-spinner-container">
-                                    <div class="d-flex flex-column text-center">
-                                        <button onclick="counterUp(this)" target="product-increment-1" class="next d-flex">
-                                            <img src="~/icons/arrow-inc.svg" />
-                                        </button>
-                                        <button onclick="counterDown(this)" target="product-increment-1" class="prev d-flex">
-                                            <img src="~/icons/arrow-dec.svg" />
-                                        </button>
+                                <div class="position-relative">
+                                    <div class="position-absolute increment-spinner-container">
+                                        <div class="d-flex flex-column text-center">
+                                            <button onclick="counterUp(this)" target="product-increment-1" class="next d-flex">
+                                                <img src="~/icons/arrow-inc.svg" />
+                                            </button>
+                                            <button onclick="counterDown(this)" target="product-increment-1" class="prev d-flex">
+                                                <img src="~/icons/arrow-dec.svg" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <p class="col" id="unit-price" data-cost="@item.Product.Price">@item.Product.FormattedPrice</p>
+
+                            @{
+                                var price = @item.Amount * @item.Product.Price;
+                            }
+                            <p class="col" id="total-price" data-total-cost="@price">@price</p>
+
+                            <a class="trash-can" onclick="selectCartItemToDelete(this)" data-bs-toggle="modal" data-bs-target="#deleteCartItemModal" data-item-id="@item.Id">
+                                <img src="~/icons/trash.svg" />
+                            </a>
                         </div>
-
-                        <p class="col" id="unit-price" data-cost="426000">426 000</p>
-
-                        <p class="col" id="total-price" data-total-cost="426000">426 000</p>
-
-                        <a class="trash-can" onclick="selectCartItemToDelete(this)" data-bs-toggle="modal" data-bs-target="#deleteCartItemModal">
-                            <img src="~/icons/trash.svg" />
-                        </a>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="cart-item">
-                <div class="cart-item-content">
-                    <div class="d-flex col-4 pe-3 gap-3">
-                        <img src="~/images/new goods/xiaomi.png" />
-                        <p class="m-0 cart-item-name">
-                            Apple iPhone SE 256 ГБ, черный
-                        </p>
-                    </div>
-
-                    <div class="ms-auto d-flex gap-5 cart-item-price-info">
-
-                        <div class="increment">
-                            <input id="product-increment-2" class="cart-item-counter border rounded" type="number" min="0" value="23" onchange="counterValueChanged(this)" />
-
-                            <div class="position-relative">
-                                <div class="position-absolute increment-spinner-container">
-                                    <div class="d-flex flex-column text-center">
-                                        <button onclick="counterUp(this)" target="product-increment-2" class="next d-flex">
-                                            <img src="~/icons/arrow-inc.svg" />
-                                        </button>
-                                        <button onclick="counterDown(this)" target="product-increment-2" class="prev d-flex">
-                                            <img src="~/icons/arrow-dec.svg" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="col" id="unit-price" data-cost="53990">53 990</p>
-
-                        <p class="col" id="total-price" data-total-cost="134000">134 000</p>
-
-                        <a class="trash-can" onclick="selectCartItemToDelete(this)" data-bs-toggle="modal" data-bs-target="#deleteCartItemModal">
-                            <img src="~/icons/trash.svg" />
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
+            }
         </div>
 
         <div class="bg-grey d-flex justify-content-between container align-items-center py-4">
-
             <p class="secondary-color m-0">Итого:</p>
 
             <p class="m-0 pe-5 text-black fs-4">
                 Итого:
-                <span id="final-price" data-final-cost="104500">104 500</span>
+                <span id="final-price" data-final-cost="0">0</span>
             </p>
-
         </div>
 
         <form class="my-5">

@@ -24,11 +24,12 @@
     .dropdown-menu .dropdown-item {
         color: var(--primary-bg-color);
         font-size: 14px;
+        width: 279.06px;
     }
 
 .catalog-menu {
     position: relative;
-    width: inherit !important;
+    width: 100%;
     box-shadow: 0px 2px 4px 0px #00000033;
     border-radius: 4px;
     color: #666666;

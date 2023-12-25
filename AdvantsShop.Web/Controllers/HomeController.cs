@@ -1,4 +1,6 @@
-﻿using AdvantsShop.Web.Models;
+﻿using AdvantShop.Domain.Services;
+using AdvantShop.Web.Models;
+using AdvantsShop.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,15 +8,24 @@ namespace AdvantsShop.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ISlideService _slideService;
+        private readonly IProductService _productService;
+        private readonly IArticleService _articleService;
+
+        public HomeController(ISlideService slideService,
+            IProductService productService,
+            IArticleService articleService)
         {
-            _logger = logger;
+            _slideService = slideService;
+            _productService = productService;
+            _articleService = articleService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var model = await FillMainViewModel();
+
+            return View(model);
         }
 
         public IActionResult Cart()
@@ -26,6 +37,17 @@ namespace AdvantsShop.Web.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private async Task<MainViewModel> FillMainViewModel()
+        {
+            return new MainViewModel
+            {
+                Slides = await _slideService.GetSlidesAsync(),
+                NewProducts = await _productService.GetNewProductsAsync(),
+                Bestsellers = await _productService.GetBestSellersAsync(),
+                Articles = await _articleService.GetLastArticlesAsync(3),
+            };
         }
     }
 }

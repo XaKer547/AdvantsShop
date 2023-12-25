@@ -1,3 +1,9 @@
+using AdvantShop.Application.Services;
+using AdvantShop.DataAccess.Data;
+using AdvantShop.Domain.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+
 namespace AdvantsShop.Web
 {
     public class Program
@@ -6,19 +12,30 @@ namespace AdvantsShop.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddMvc()
-                .AddRazorRuntimeCompilation();
+            builder.Services.AddMvc().AddRazorRuntimeCompilation();
 
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<AdvantShopDbContext>(opt =>
+            {
+                opt.UseSqlite("Filename=AdvantShop.db");
+            });
+
+            builder.Services.AddScoped<ISlideService, SlideService>();
+            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IArticleService, ArticleService>();
+            builder.Services.AddScoped<ICartService, CartService>();
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            builder.Services.AddAuthorization();
+
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -27,6 +44,7 @@ namespace AdvantsShop.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

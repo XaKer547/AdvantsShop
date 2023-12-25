@@ -1,0 +1,51 @@
+﻿@using AdvantShop.Web.Models;
+@model AuthorizationViewModel
+@{
+    ViewData["Title"] = "Авторизация";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="d-flex row mb-5 mt-5 justify-content-between">
+
+    <div class="col-4 pe-5">
+        <p class="fs-4 secondary-color">У меня уже есть учетная запись</p>
+
+        <form method="post" class="needs-validation" asp-action="Authorization" asp-controller="Account">
+            <div>
+                <p>E-mail</p>
+
+                <input asp-for="Email" class="bg-grey form-control" name="email"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="mt-2 mb-4">
+                <p>Пароль</p>
+                <div>
+
+                    <input asp-for="Password" class="bg-grey form-control" type="password" name="password" required />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="d-flex gap-2 align-items-center">
+                <button class="btn btn-primary primary py-3 px-5" type="submit">Вход</button>
+
+                <a class="primary-color nav-link">Забыли пароль?</a>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="col-5 p-0">
+        <p class="fs-4">Я - новый покупатель</p>
+
+        <p class="secondary-color">
+            Регистрация на сайте позволит быстро оформлять заказы, управлять заказами через личный кабинет,
+            в полном объеме использовать возможности нашего интернет магазина.
+        </p>
+
+        <a class="btn btn-primary primary px-4 py-3" href="/Account/Registration">Регистрация</a>
+    </div>
+</div>

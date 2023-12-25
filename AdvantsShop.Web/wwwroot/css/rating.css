@@ -4,7 +4,7 @@
     .rating .star {
         width: 12px;
         height: 12px;
-        filter: invert(72%) sepia(64%) saturate(596%) hue-rotate(347deg) brightness(101%) contrast(101%);
+        filter: invert(100%) sepia(0%) saturate(7204%) hue-rotate(32deg) brightness(113%) contrast(71%);
     }
 
 .star.toogled {

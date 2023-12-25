@@ -50,7 +50,7 @@ cart-item img {
     }
 
 
-.form-input-container input[type=text] {
+.form-input-container input {
     background-color: #F9F9F9;
     border: 1px solid var(--secondary-color);
     border-radius: 4px;
