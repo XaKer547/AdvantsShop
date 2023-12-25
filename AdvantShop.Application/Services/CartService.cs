@@ -55,7 +55,7 @@ namespace AdvantShop.Application.Services
 
         public async Task ClearCartAsync(int userId)
         {
-            var user = _context.Users.SingleOrDefault(u => u.Id == userId);
+            var user = _context.Users.Include(u => u.Cart.Products).SingleOrDefault(u => u.Id == userId);
 
             if (user == null)
             {

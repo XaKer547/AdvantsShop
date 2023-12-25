@@ -353,7 +353,7 @@
 
                                                         @if (newProduct.InStock)
                                                         {
-                                                            <a class="nav-link secondary p-0 d-flex align-items-center gap-2" data-item-id="@newProduct.Id" onclick="addToCart(this.getAttribute('data-item-id'))">
+                                                            <a class="nav-link secondary p-0 d-flex align-items-center gap-2 c-pointer" data-item-id="@newProduct.Id" onclick="addToCart(this.getAttribute('data-item-id'))">
                                                                 <img src="/icons/shop-cart.svg">
                                                                 <span>
                                                                     В корзину
@@ -460,7 +460,7 @@
 
                                                         @if (bestSellerProduct.InStock)
                                                         {
-                                                            <a class="nav-link secondary p-0 d-flex align-items-center gap-2" data-item-id="@bestSellerProduct.Id" onclick="addToCart(this.getAttribute('data-item-id'))">
+                                                            <a class="nav-link secondary p-0 d-flex align-items-center gap-2 c-pointer" data-item-id="@bestSellerProduct.Id" onclick="addToCart(this.getAttribute('data-item-id'))">
                                                                 <img src="/icons/shop-cart.svg">
                                                                 <span>
                                                                     В корзину
